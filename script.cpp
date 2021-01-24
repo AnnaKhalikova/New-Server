@@ -9,6 +9,18 @@
 using namespace std;
 using namespace cgicc;
 
+string getDB(){
+	std::ifstream in("db.txt");
+
+    string dbText = "", s1;
+    while (getline(in, s1))
+    	dbText += s1;
+  
+    in.close();
+    
+    return dbText;
+}
+
 int getLength(string name) {
     return name.size();
 }
@@ -29,6 +41,7 @@ int main()
     name = form("name");
     if (!name.empty()) {
     	cout << "Count characters of your text is " << getLength(name) << "\n";
+        cout << "Data in database: " << getDB() << "\n";
     } else {
     	cout << "Text is not provided!\n";
     }	
