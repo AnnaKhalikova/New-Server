@@ -9,20 +9,9 @@
 using namespace std;
 using namespace cgicc;
 
-string getDB(){
-	std::ifstream in("db.txt");
-
-    string dbText = "", s1;
-    while (getline(in, s1))
-    	dbText += s1;
-  
-    in.close();
-    
-    return dbText;
-}
-int getLength(string name) {
-    return name.size();
-}
+string getDB();
+string getResultPageHTML();
+int getInt(string text);
 
 int main()
 {
@@ -39,7 +28,7 @@ int main()
     
     name = form("name");
     if (!name.empty()) {
-    	cout << "Count characters of your text is " << getLength(name) << "\n";
+    	cout << getResultPageHTML() << getLength(name) << "\n";
         cout << "Data in database: " << getDB() << "\n";
     } else {
     	cout << "Text is not provided!\n";
@@ -49,4 +38,29 @@ int main()
     cout << "</html>\n";
 
     return 0;
+}
+int getInt(string text) {
+    return text.size();
+}
+string getDB(){
+	std::ifstream in("db.txt");
+
+    string dbText = "", s1;
+    while (getline(in, s1))
+    	dbText += s1;
+  
+    in.close();
+    
+    return dbText;
+}
+string getResultPageHTML(){
+    std::ifstream in("result.html");
+
+    string resultPage = "", s1;
+    while (getline(in, s1))
+    	resultPage += s1;
+  
+    in.close();
+    
+    return resultPage;
 }

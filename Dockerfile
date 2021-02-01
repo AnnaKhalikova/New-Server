@@ -11,6 +11,7 @@ copy conf/cgid.conf /etc/apache2/mods-enabled/
 copy conf/cgid.load /etc/apache2/mods-enabled/
 copy conf/cgi.load /etc/apache2/mods-enabled/
 copy db.txt /var/www/db.txt
+copy result.html /var/www/result.html
 RUN mkdir /var/www/cgi-bin
 copy Makefile /var/www/cgi-bin/
 copy script.cpp /var/www/cgi-bin/
