@@ -46,7 +46,38 @@
                                 </div>
                             </form>
                         </div>
-			    
+			<section>
+				<div>
+				<h1 align="center" style="color: blue " >Result...</h1>
+				    <h1 align="center" style="color: blue" id="result"></h1>
+				</div>
+				<script>
+					    document.addEventListener("DOMContentLoaded", function () {
+
+						    const sendButton = document.getElementById('send')
+						    sendButton.addEventListener('click', function () {
+							    let payload = 'name=' + encodeURIComponent(document.getElementById('value').value)
+
+							    const request = new XMLHttpRequest()
+							    request.open('POST', 'http://34.86.152.212:8080/cgi-bin/script.cgi', true)
+
+							    request.addEventListener('readystatechange', function () {
+
+								    if ((request.readyState === 4) && (request.status === 200)) {
+									    console.log(request.responseText)
+									    let result = document.getElementById('result')
+									    result.innerHTML = request.responseText
+								    } else {
+									    console.log('ops...!')
+								    }
+							    })
+
+							    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+							    request.send(payload)
+						    })
+					    })
+				</script>
+			</section>    
                         <div class="content__column" id="img-content">
                             <!--///no-full///width="560" height='340'////////////////////////////////////// -->
                             <svg width="460" height="280" viewBox="0 0 560 340" fill="none"
@@ -120,38 +151,7 @@
             var text = doc.querySelector('.result');
 	    document.body.appendChild(text.cloneNode(true));
     </script> -->
-    <section>
-	<div>
-	<h3 >Result...</h3>
-	    <h3 id="result"></h3>
-        </div>
-    	<script>
-		    document.addEventListener("DOMContentLoaded", function () {
-			
-			    const sendButton = document.getElementById('send')
-			    sendButton.addEventListener('click', function () {
-				    let payload = 'name=' + encodeURIComponent(document.getElementById('value').value)
-				    
-				    const request = new XMLHttpRequest()
-				    request.open('POST', 'http://34.86.152.212:8080/cgi-bin/script.cgi', true)
-				    
-				    request.addEventListener('readystatechange', function () {
-				    	
-					    if ((request.readyState === 4) && (request.status === 200)) {
-						    console.log(request.responseText)
-						    let result = document.getElementById('result')
-						    result.innerHTML = request.responseText
-					    } else {
-						    console.log('ops...!')
-					    }
-				    })
-				    
-				    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-				    request.send(payload)
-			    })
-		    })
-	</script>
-    </section>
+    
     <!--<script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
     <script src="libs/select/select.js"></script>
  
