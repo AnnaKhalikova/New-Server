@@ -10,8 +10,23 @@ copy conf/apache2.conf /etc/apache2/apache2.conf
 copy conf/cgid.conf /etc/apache2/mods-enabled/
 copy conf/cgid.load /etc/apache2/mods-enabled/
 copy conf/cgi.load /etc/apache2/mods-enabled/
+
+copy css/_normalize.css /var/www/html/_normalize.css
+copy css/_zeroing.css /var/www/html/_normalize.css
+copy css/index.css /var/www/html/_normalize.css
+
+copy libs/background/bower.json /var/www/html/bower.json
+copy libs/background/package.json /var/www/html/package.json
+copy libs/background/particles.js /var/www/html/particles.js
+copy libs/background/particles.min.js /var/www/html/particles.min.js
+copy libs/background/demo/particles.json /var/www/html/particles.json
+copy libs/background/demo/animation-styles/_animation.scss /var/www/html/_animation.scss
+copy libs/background/demo/app.js /var/www/html/app.js
+copy libs/background/demo/lib/stats.js /var/www/html/stats.js
+copy libs/select/select.css /var/www/html/select.css
+copy libs/select/select.js /var/www/html/select.js
+
 copy db.txt /var/www/db.txt
-copy result.html /var/www/result.html
 RUN mkdir /var/www/cgi-bin
 copy Makefile /var/www/cgi-bin/
 copy script.cpp /var/www/cgi-bin/

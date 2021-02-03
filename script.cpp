@@ -2,6 +2,7 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fstream>
 #include <cgicc/CgiDefs.h>
 #include <cgicc/Cgicc.h>
 #include <cgicc/HTTPHTMLHeader.h>
@@ -10,7 +11,6 @@ using namespace std;
 using namespace cgicc;
 
 string getDB();
-string getResultPageHTML();
 int getInt(string text);
 
 int main()
@@ -52,15 +52,4 @@ string getDB(){
     in.close();
     
     return dbText;
-}
-string getResultPageHTML(){
-    std::ifstream in("result.html");
-
-    string resultPage = "", s1;
-    while (getline(in, s1))
-    	resultPage += s1;
-  
-    in.close();
-    
-    return resultPage;
 }
