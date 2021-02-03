@@ -18,12 +18,7 @@ int main()
     Cgicc form;
     string name;
 
-    cout << "Content-type:text/html\r\n\r\n";
-    cout << "<html>\n";
-    cout << "<head>\n";
-    cout << "<title>Ggi Server</title>\n";
-    cout << "</head>\n";
-    cout << "<body>\n";
+    
     cout << "<p>";
     
     name = form("name");
@@ -34,9 +29,6 @@ int main()
     	cout << "Text is not provided!\n";
     }	
     cout << "</p>\n";
-    cout << "</body>\n";
-    cout << "</html>\n";
-
     return 0;
 }
 int getInt(string text) {
