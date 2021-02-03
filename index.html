@@ -120,8 +120,12 @@
             var text = doc.querySelector('.result');
 	    document.body.appendChild(text.cloneNode(true));
     </script> -->
-    <script>
-		
+    <section>
+	<div>
+	<h3>Result...</h3>
+	    <h3 id="result"></h3>
+        </div>
+    	<script>
 		    document.addEventListener("DOMContentLoaded", function () {
 			
 			    const sendButton = document.getElementById('send')
@@ -146,7 +150,8 @@
 				    request.send(payload)
 			    })
 		    })
-    </script>
+	</script>
+    </section>
     <!--<script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
     <script src="libs/select/select.js"></script>
  
