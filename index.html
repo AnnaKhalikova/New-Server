@@ -36,7 +36,7 @@
                         <div class="content__column">
                             <form class="content__form" method="post">
                                 <div class="content__textarea">
-                                    <textarea name="text" id="textarea-test" placeholder="Введите сюда текст для проверки на уникальность"></textarea>
+                                    <textarea id="value" name="value" id="textarea-test" placeholder="Введите сюда текст для проверки на уникальность"></textarea>
                                 </div>
                                 <div class="content__manage">
                                     <div class="content__select"></div>
@@ -114,10 +114,40 @@
         </div>
     </div>
     </div>
-    <script>
+<!--     <script>
 	    var doc = document.querySelector('link[rel="import"]').import;
             var text = doc.querySelector('.result');
 	    document.body.appendChild(text.cloneNode(true));
+    </script> -->
+    <script>
+		    var doc = document.querySelector('link[rel="import"]').import;
+		    var text = doc.querySelector('.doc');
+		    document.body.appendChild(text.cloneNode(true));
+		
+		    document.addEventListener("DOMContentLoaded", function () {
+			
+			    const sendButton = document.getElementById('send')
+			    sendButton.addEventListener('click', function () {
+				    let payload = 'name=' + encodeURIComponent(document.getElementById('value').value)
+				    
+				    const request = new XMLHttpRequest()
+				    request.open('POST', 'http://34.86.152.212:8080/cgi-bin/script.cgi', true)
+				    
+				    request.addEventListener('readystatechange', function () {
+				    	
+					    if ((request.readyState === 4) && (request.status === 200)) {
+						    console.log(request.responseText)
+						    let result = document.getElementById('result')
+						    result.innerHTML = request.responseText
+					    } else {
+						    console.log('ops...!')
+					    }
+				    })
+				    
+				    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+				    request.send(payload)
+			    })
+		    })
     </script>
     <!--<script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
 
