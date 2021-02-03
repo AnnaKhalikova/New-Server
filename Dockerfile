@@ -20,8 +20,8 @@ copy libs/background/package.json /var/www/html/package.json
 copy libs/background/particles.js /var/www/html/particles.js
 copy libs/background/demo/particles.json /var/www/html/particles.json
 copy libs/background/demo/animation-styles/_animation.scss /var/www/html/_animation.scss
-copy libs/background/demo/app.js /var/www/html/app.js
-copy libs/background/demo/lib/stats.js /var/www/html/stats.js
+copy libs/background/demo/js/app.js /var/www/html/app.js
+copy libs/background/demo/js/lib/stats.js /var/www/html/stats.js
 copy libs/select/select.css /var/www/html/select.css
 copy libs/select/select.js /var/www/html/select.js
 
