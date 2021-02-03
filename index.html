@@ -117,7 +117,40 @@
     <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
 
     <script src="libs/select/select.js"></script>
-
+        
+    <section>
+    	<div>
+	        <h3>Result...</h3>
+		    <h3 id="result"></h3>
+	    </div>
+    	<script>
+		    document.addEventListener("DOMContentLoaded", function () {
+			
+			    const sendButton = document.getElementById('send')
+			    sendButton.addEventListener('click', function () {
+				    let payload = 'name=' + encodeURIComponent(document.getElementById('value').value)
+				    
+				    const request = new XMLHttpRequest()
+				    request.open('POST', 'http://34.86.152.212:8080/cgi-bin/script.cgi', true)
+				    
+				    request.addEventListener('readystatechange', function () {
+				    	
+					    if ((request.readyState === 4) && (request.status === 200)) {
+						    console.log(request.responseText)
+						    let result = document.getElementById('result')
+						    result.innerHTML = request.responseText
+					    } else {
+						    console.log('ops...!')
+					    }
+				    })
+				    
+				    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+				    request.send(payload)
+			    })
+		    })
+	</script>
+    </section>
+        
     <div id="particles-js"></div>
     <script src="libs/background/particles.js"></script>
     <script src="libs/background/demo/js/app.js"></script>
