@@ -120,10 +120,11 @@
     <script src="libs/select/select.js"></script>
         
     <section>
-    	<div>
-	        <h3>Result...</h3>
-		    <h3 id="result"></h3>
-	    </div>
+	<script>
+		    var doc = document.querySelector('link[rel="import"]').import;
+		    var text = doc.querySelector('.result');
+		    document.body.appendChild(text.cloneNode(true));
+        </script>
     	<script>
 		    var doc = document.querySelector('link[rel="import"]').import;
 		    var text = doc.querySelector('.doc');
@@ -142,7 +143,7 @@
 				    	
 					    if ((request.readyState === 4) && (request.status === 200)) {
 						    console.log(request.responseText)
-						    let result = doc.getElementById('result')
+						    let result = document.getElementById('result')
 						    result.innerHTML = request.responseText
 					    } else {
 						    console.log('ops...!')
@@ -154,7 +155,6 @@
 			    })
 		    })
 	</script>
-    </section>
         
     <div id="particles-js"></div>
     <script src="libs/background/particles.js"></script>
