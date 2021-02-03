@@ -28,7 +28,7 @@ int main()
     
     name = form("name");
     if (!name.empty()) {
-    	cout << getResultPageHTML() << getLength(name) << "\n";
+    	cout << getInt(name) << "\n";
         cout << "Data in database: " << getDB() << "\n";
     } else {
     	cout << "Text is not provided!\n";
