@@ -18,7 +18,6 @@ copy css/index.css /var/www/html/_normalize.css
 copy libs/background/bower.json /var/www/html/bower.json
 copy libs/background/package.json /var/www/html/package.json
 copy libs/background/particles.js /var/www/html/particles.js
-copy libs/background/particles.min.js /var/www/html/particles.min.js
 copy libs/background/demo/particles.json /var/www/html/particles.json
 copy libs/background/demo/animation-styles/_animation.scss /var/www/html/_animation.scss
 copy libs/background/demo/app.js /var/www/html/app.js
