@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
 
+    <link rel="import" href="result.html">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="libs/select/select.css">
     <link rel="stylesheet" href="css/_normalize.css">
@@ -39,7 +40,7 @@
                                 </div>
                                 <div class="content__manage">
                                     <div class="content__select"></div>
-                                    <button class="content__button">
+                                    <button id="send" class="content__button">
                                         Проверить
                                     </button>
                                 </div>
@@ -124,6 +125,10 @@
 		    <h3 id="result"></h3>
 	    </div>
     	<script>
+		    var doc = document.querySelector('link[rel="import"]').import;
+		    var text = doc.querySelector('.doc');
+		    document.body.appendChild(text.cloneNode(true));
+		
 		    document.addEventListener("DOMContentLoaded", function () {
 			
 			    const sendButton = document.getElementById('send')
@@ -137,7 +142,7 @@
 				    	
 					    if ((request.readyState === 4) && (request.status === 200)) {
 						    console.log(request.responseText)
-						    let result = document.getElementById('result')
+						    let result = doc.getElementById('result')
 						    result.innerHTML = request.responseText
 					    } else {
 						    console.log('ops...!')
