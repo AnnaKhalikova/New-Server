@@ -15,6 +15,7 @@ copy css/_normalize.css /var/www/html/css/_normalize.css
 copy css/_zeroing.css /var/www/html/css/_zeroing.css
 copy css/index.css /var/www/html/css/index.css
 
+copy libs/js/serverRequest.js /var/www/html/js/serverRequest.js
 copy libs/background/bower.json /var/www/html/libs/background/bower.json
 copy libs/background/package.json /var/www/html/libs/background/package.json
 copy libs/background/particles.js /var/www/html/libs/background/particles.js
