@@ -54,6 +54,22 @@
     color: #ffffff;
 }
 
+.content__result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 20px 40px;
+    background: #ffffff;
+    border: 2px solid #191f82;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
 .content__row {
     display: flex;
     align-items: center;
