@@ -36,7 +36,7 @@ int main()
     cout << "<p>";
     
     name = form("name");
-    getResult(getCharArrayFromString(name), getCharArrayFromString(getDB()), 3, &unique);
+    getResult(getCharArrayFromString(name), getCharArrayFromString(getDB()), 3, unique);
     if (!name.empty()) {
     	cout << unique << "\n";
     } else {
