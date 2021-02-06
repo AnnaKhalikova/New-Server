@@ -54,7 +54,7 @@ char* getCharArrayFromString(string text){
 	for(int i = 0; i < text.length(); i++){
 		textArray[i] = text[i];
 	}
-	return getCharArrayFromString;
+	return textArray;
 }
 
 string getDB(){
