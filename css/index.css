@@ -53,11 +53,14 @@
     text-align: center;
     color: #ffffff;
 }
-#result{
+
+#resultContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+
 .content__result {
     display: flex;
     align-items: center;
