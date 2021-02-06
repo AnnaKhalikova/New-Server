@@ -28,10 +28,10 @@ copy libs/background/demo/js/lib/stats.js /var/www/html/libs/background/demo/js/
 copy libs/select/select.css /var/www/html/libs/select/select.css
 copy libs/select/select.js /var/www/html/libs/select/select.js
 
-copy db.txt /var/www/cgi-bin/db.txt
 RUN mkdir /var/www/cgi-bin
 copy Makefile /var/www/cgi-bin/
 copy script.cpp /var/www/cgi-bin/
+copy db.txt /var/www/cgi-bin/db.txt
 WORKDIR /var/www/cgi-bin
 RUN make
 RUN chmod 755 script.cgi
