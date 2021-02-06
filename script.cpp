@@ -2,7 +2,6 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
-//#include <fstream>
 #include <cgicc/CgiDefs.h>
 #include <cgicc/Cgicc.h>
 #include <cgicc/HTTPHTMLHeader.h>
@@ -10,6 +9,7 @@
 using namespace std;
 using namespace cgicc;
 
+char* getCharArrayFromString(string text);
 void setNormalizeText(char* text);
 bool isCapitalLetter(char letter);
 void splitString(char* string, int startWordPosition = 0, int count = 1);
@@ -36,7 +36,7 @@ int main()
     cout << "<p>";
     
     name = form("name");
-    getResult(name, getDB(), 3, &unique);
+    getResult(getCharArrayFromString(name), getCharArrayFromString((getDB()), 3, &unique);
     if (!name.empty()) {
     	cout << unique << "\n";
     } else {
@@ -47,6 +47,14 @@ int main()
     cout << "</html>\n";
 
     return 0;
+}
+
+char* getCharArrayFromString(string text){
+	char* textArray = new char[text.length()];
+	for(int i = 0; i < text.length(); i++){
+		textArray[i] = text[i];
+	}
+	return getCharArrayFromString;
 }
 
 string getDB(){
