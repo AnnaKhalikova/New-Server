@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const result = document.querySelector('#result');
                 const content = document.querySelector('#content');
                 const subtitle = document.querySelector("#subtitle");
+                const serverAnswer = document.querySelector("#serverAnswer");
 
                 container.addEventListener('click', event => {
                     if (event.target.id === "send") {
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         content.classList.add('hide');
 
                         subtitle.innerHTML = "The result of checking the text for uniqueness";
+                        serverAnswer.innerHTML = `Your text is ${request.responseText} % unique`;
                     }
 
                     if (event.target.id === "back") {
