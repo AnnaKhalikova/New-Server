@@ -28,11 +28,9 @@
     width: 16px;
     height: 3px;
     background-color: #000;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: 11.4px;
     top: 50%;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -43,45 +41,33 @@
     width: 16px;
     height: 3px;
     background-color: #000;
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     right: 2px;
     top: 50%;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .select__header.active .select__arrow .arrow-select::after {
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
 .select__header.active .select__arrow .arrow-select::before {
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .select-value {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    padding: 12px 70px 12px 21px;
+    padding: 12px 68px 12px 20px;
 }
 
 .select__header {
     cursor: pointer;
     background: #ffffff;
     border: 2px solid #191f82;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 
@@ -106,15 +92,11 @@
 }
 
 .select__text {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     font-family: "Roboto", sans-serif;
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 
@@ -126,11 +108,9 @@
     position: absolute;
     background: #ffffff;
     border: 2px solid #191f82;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -156,11 +136,9 @@
     width: 16px;
     height: 3px;
     background-color: #000;
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     right: 11.5px;
     top: 50%;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -171,45 +149,36 @@
     width: 16px;
     height: 3px;
     background-color: #000;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: 2px;
     top: 50%;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .select__body.active {
     opacity: 1;
     visibility: visible;
-    top: -400%;
+    top: -450%;
 }
 
 .select__body.active .select__arrow .arrow-select::after {
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .select__body.active .select__arrow .arrow-select::before {
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
 .select-disable {
     cursor: no-drop;
     border-bottom: 2px solid #efefef;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
-}
-
-.select-disable:hover {
-    background-color: rgba(255, 0, 0, 0.342);
+    opacity: .3;
 }
 
 .select-option {
     cursor: pointer;
     border-bottom: 2px solid #efefef;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 
