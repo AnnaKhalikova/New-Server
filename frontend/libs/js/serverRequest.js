@@ -38,9 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         subtitle.innerHTML = "Intelligent App for text processing";
                     }
                 })
-            } else {
-                alert("Something wrong!")
-            }
+            } 
         })
 
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
