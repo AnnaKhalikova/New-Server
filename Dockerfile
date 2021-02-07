@@ -6,7 +6,7 @@ RUN apt install libcgicc3 -y
 RUN apt install libcgicc-dev -y
 RUN apt install make -y
 
-copy frontend/index.html /var/www/html/frontend/index.html
+copy index.html /var/www/html/
 
 copy conf/apache2.conf /etc/apache2/apache2.conf
 copy conf/cgid.conf /etc/apache2/mods-enabled/
