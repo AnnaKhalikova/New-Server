@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         content.classList.add('hide');
 
                         subtitle.innerHTML = "The result of checking the text for uniqueness";
-                        serverAnswer.textContent = `Your text is ${request.responseText} % unique`;
+                        serverAnswer.textContent = `Your text is ${request.responseText.querySelector('p').textContent.trim()} % unique`;
                     }
 
                     if (event.target.id === "back") {
