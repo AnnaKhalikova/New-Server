@@ -10,8 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
         request.addEventListener('readystatechange', function () {
 
             if ((request.readyState === 4) && (request.status === 200)) {
-                const container = document.querySelector('#container');
-                const result = document.querySelector('#result');
+                const form = document.forms.submitAI
+                const result = form.querySelector('#result');
+              
+                // all dynamic elements should be located inside one form
+                // in that case all we need to copy paste the same code of form from html
+                // in every new project, just ctrl+c / ctrl+v
+                
+//                 const container = document.querySelector('#container');
+//                 const result = document.querySelector('#result');
                 const content = document.querySelector('#content');
                 const subtitle = document.querySelector("#subtitle");
                 const serverAnswer = document.querySelector("#serverAnswer");
