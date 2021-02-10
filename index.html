@@ -41,7 +41,22 @@
                             <button class="content__button" id="back">Back</button>
                         </div>
                     </div> -->
+                    <form name="submitAI" onclick="submitForm()" method="post">
+                                                                   
+                        <div id="result" class="hide">
+                            <div id="resultContent" class="test__content content">
+                                <div class="content__result">
+                                    <span class="content-result__img">
+                                        <img src="frontend/img/result.png" alt="result-img">
+                                    </span>
+                                    <p id="serverAnswer" class="result-content"></p>
+                                </div>
+                            </div>
+                        </div>
 
+                        <button class="content__button" id="back">Back</button>
+                        <button type="button" id="send" class="content__button">Check</button>
+                    </form>
                     <div id="content" class="show">
                         <div id="testContent" class="test__content content">
                             <div class="content__row">
@@ -89,22 +104,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <form name="submitAI" onclick="submitForm()" method="post">
-                                                                   
-                                                <div id="result" class="hide">
-                                                    <div id="resultContent" class="test__content content">
-                                                        <div class="content__result">
-                                                            <span class="content-result__img">
-                                                                <img src="frontend/img/result.png" alt="result-img">
-                                                            </span>
-                                                            <p id="serverAnswer" class="result-content"></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <button class="content__button" id="back">Back</button>
-                                                <button type="button" id="send" class="content__button">Check</button>
-                                             </form>
+                                            
 <!--                                             <button type="button" id="send" class="content__button">Check</button> -->
                                         </div>
 <!--                                     </form> -->
