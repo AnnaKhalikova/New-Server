@@ -30,7 +30,7 @@
                         </div>
                     </div>
 
-                    <div id="result" class="hide">
+<!--                     <div id="result" class="hide">
                         <div id="resultContent" class="test__content content">
                             <div class="content__result">
                                 <span class="content-result__img">
@@ -40,16 +40,16 @@
                             </div>
                             <button class="content__button" id="back">Back</button>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div id="content" class="show">
                         <div id="testContent" class="test__content content">
                             <div class="content__row">
                                 <div class="content__column">
-                                    <form class="content__form" method="post">
+<!--                                     <form class="content__form" method="post">
                                         <div class="content__textarea">
                                             <textarea name="value" id="value" placeholder="Input text..."></textarea>
-                                        </div>
+                                        </div> -->
                                         <div class="content__manage">
                                             <div class="content__select">
                                                 <div class="select__header">
@@ -89,9 +89,25 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="button" id="send" class="content__button">Check</button>
+                                            <form name="submitAI" onclick="submitForm()" method="post">
+                                                                   
+                                                <div id="result" class="hide">
+                                                    <div id="resultContent" class="test__content content">
+                                                        <div class="content__result">
+                                                            <span class="content-result__img">
+                                                                <img src="frontend/img/result.png" alt="result-img">
+                                                            </span>
+                                                            <p id="serverAnswer" class="result-content"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <button class="content__button" id="back">Back</button>
+                                                <button type="button" id="send" class="content__button">Check</button>
+                                             </form>
+<!--                                             <button type="button" id="send" class="content__button">Check</button> -->
                                         </div>
-                                    </form>
+<!--                                     </form> -->
                                 </div>
                                 <div class="content__column">
                                     <img class="content-column__img" src="frontend/img/main.png" alt="">
