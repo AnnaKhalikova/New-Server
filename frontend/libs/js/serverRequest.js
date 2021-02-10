@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const sendButton = document.getElementById('send') // button send
-    sendButton.addEventListener('click', function () {
+    sendButton.addEventListener('click', submitForm () {
         let payload = 'name=' + encodeURIComponent(document.getElementById('value').value)
 
         const request = new XMLHttpRequest()
