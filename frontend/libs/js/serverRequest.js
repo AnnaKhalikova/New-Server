@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // in that case all we need to copy paste the same code of form from html
                 // in every new project, just ctrl+c / ctrl+v
                 
-//                 const container = document.querySelector('#container');
-//                 const result = document.querySelector('#result');
+                const container = document.querySelector('#container');
+                const result = document.querySelector('#result');
                 const content = document.querySelector('#content');
                 const subtitle = document.querySelector("#subtitle");
                 const serverAnswer = document.querySelector("#serverAnswer");
