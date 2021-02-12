@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="frontend/css/index.css">
-    <link rel="stylesheet" href="frontend/libs/select/select.css">
-    <link rel="stylesheet" href="frontend/css/_normalize.css">
-    <link rel="stylesheet" href="frontend/css/_zeroing.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="libs/select/select.css">
+    <link rel="stylesheet" href="css/_normalize.css">
+    <link rel="stylesheet" href="css/_zeroing.css">
     <title>text.AI</title>
 </head>
 
@@ -17,7 +17,7 @@
 
     <div class="wrapper">
         <div class="test">
-            <div id="container" class="test__container">
+            <div class="test__container">
                 <div class="test__body">
                     <div class="test__heading">
                         <div class="test__title">
@@ -30,25 +30,22 @@
                         </div>
                     </div>
 
-                    <div id="result" class="hide">
-                        <div id="resultContent" class="test__content content">
-                            <div class="content__result">
+                    <div id="resultContent" class="content hide">
+                        <div class="content__result">
                                 <span class="content-result__img">
-                                    <img src="frontend/img/result.png" alt="result-img">
+                                    <img src="img/result.png" alt="result-img">
                                 </span>
-                                <p id="serverAnswer" class="result-content"></p>
-                            </div>
-                            <button class="content__button" id="back">Back</button>
+                            <p class="result-content">Your text is <span>60</span> % unique</p>
                         </div>
+                        <button class="content__button" onclick="returnBack()">Back</button>
                     </div>
 
-                    <div id="content" class="show">
-                        <div id="testContent" class="test__content content">
-                            <div class="content__row">
-                                <div class="content__column">
-                                    <form class="content__form" method="post">
+                    <form name="submitAI" onclick="onSubmitForm()">
+                        <div id="testContent" class="content show">
+                                <div class="content__row">
+                                    <div class="content__column">
                                         <div class="content__textarea">
-                                            <textarea name="value" id="value" placeholder="Input text..."></textarea>
+                                            <textarea name="value" id="textarea-test" placeholder="Input text..."></textarea>
                                         </div>
                                         <div class="content__manage">
                                             <div class="content__select">
@@ -56,7 +53,7 @@
                                                     <div class="select__arrow"><span class="arrow-select"></span></div>
                                                     <div class="select__current select-value">
                                                         <div class="select__icon">
-                                                            <img src="frontend/img/select/uniqueness.png" alt="uniqueness">
+                                                            <img src="img/select/uniqueness.png" alt="uniqueness">
                                                         </div>
                                                         <p class="select__text">Uniqueness</p>
                                                     </div>
@@ -64,59 +61,58 @@
                                                         <div class="select__arrow"><span class="arrow-select"></span></div>
                                                         <div class="select-option select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/uniqueness.png" alt="uniqueness">
+                                                                <img src="img/select/uniqueness.png" alt="uniqueness">
                                                             </div>
                                                             <p class="select__text">Uniqueness</p>
                                                         </div>
                                                         <div class="select-disable select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/repetition.png" alt="repetition">
+                                                                <img src="img/select/repetition.png" alt="repetition">
                                                             </div>
                                                             <p class="select__text">Repetition</p>
                                                         </div>
                                                         <div class="select-disable select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/misprint.png" alt="misprint">
+                                                                <img src="img/select/misprint.png" alt="misprint">
                                                             </div>
                                                             <p class="select__text">Misprint</p>
                                                         </div>
                                                         <div class="select-disable select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/validation.png" alt="validation">
+                                                                <img src="img/select/validation.png" alt="validation">
                                                             </div>
                                                             <p class="select__text">Validation</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="button" id="send" class="content__button">Check</button>
+                                            <button class="content__button">Check</button>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="content__column">
-                                    <img class="content-column__img" src="frontend/img/main.png" alt="">
+                                    </div>
+                                    <div class="content__column">
+                                        <img class="content-column__img" src="img/main.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                    </form>
 
                     <div class="test__footer footer">
                         <div class="footer__row">
                             <a href="http://devincubator.by" class="footer__column footer__logo" target="_blank">
-                                <img src="frontend/img/footer/logo.png" alt="logo">
+                                <img src="img/footer/logo.png" alt="logo">
                             </a>
                             <div class="footer__column footer__info">
                                 <p class="footer__text">Dev Incubator, 2021</p>
                             </div>
                             <div class="footer__column footer__socials">
                                 <a href="https://github.com" class="footer__social" target="_blank">
-                                    <img src="frontend/img/footer/github.png" alt="github">
+                                    <img src="img/footer/github.png" alt="github">
                                 </a>
                                 <a href="https://vk.com/feed" class="footer__social" target="_blank">
-                                    <img src="frontend/img/footer/vk.png" alt="vk">
+                                    <img src="img/footer/vk.png" alt="vk">
                                 </a>
                                 <a href="https://www.facebook.com/" class="footer__social" target="_blank">
-                                    <img src="frontend/img/footer/facebook.png" alt="facebook">
+                                    <img src="img/footer/facebook.png" alt="facebook">
                                 </a>
                             </div>
                         </div>
@@ -126,13 +122,36 @@
         </div>
     </div>
 
-    <script src="frontend/libs/select/select.js"></script>
+<!--    <script>-->
+<!--        function onSubmitForm() {-->
+<!--            event.preventDefault()-->
+<!--            resultContent.classList.remove('hide');-->
+<!--            resultContent.classList.add('show');-->
+
+<!--            testContent.classList.remove('show');-->
+<!--            testContent.classList.add('hide');-->
+
+<!--            subtitle.innerHTML = "The result of checking the text for uniqueness";-->
+<!--        }-->
+
+<!--        function returnBack() {-->
+<!--            testContent.classList.remove('hide');-->
+<!--            testContent.classList.add('show');-->
+
+<!--            resultContent.classList.remove('show');-->
+<!--            resultContent.classList.add('hide');-->
+
+<!--            subtitle.innerHTML = "Intelligent App for text processing";-->
+<!--        }-->
+<!--    </script>-->
+
+    <script src="libs/select/select.js"></script>
     <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
 
-    <script src="frontend/libs/background/particles.js"></script>
-    <script src="frontend/libs/background/app.js"></script>
+    <script src="libs/background/particles.js"></script>
+    <script src="libs/background/app.js"></script>
 
-    <script src="frontend/libs/js/serverRequest.js"></script>
+    <script src="libs/js/serverRequest.js"></script>
 </body>
 
 
