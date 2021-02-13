@@ -244,10 +244,18 @@
     margin-right: auto;
 }
 
-.hide {
-    display: none;
+.result {
+  color: #f3f3f3;
+  font-size: 5rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  top: 42%;
+  right: 0;
+  left: 63%;
+  z-index: 999;
 }
 
-.show {
-    display: block;
+.opacity {
+  opacity: .4;
 }
