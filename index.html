@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="frontend/css/index.css">
-    <link rel="stylesheet" href="frontend/libs/select/select.css">
-    <link rel="stylesheet" href="frontend/css/_normalize.css">
-    <link rel="stylesheet" href="frontend/css/_zeroing.css">
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/select.css">
+    <link rel="stylesheet" href="src/_normalize.css">
+    <link rel="stylesheet" href="src/_zeroing.css">
     <title>text.AI</title>
 </head>
 
@@ -36,6 +36,7 @@
                                 <div class="content__column">
                                     <form class="content__form" method="post">
                                         <div class="content__textarea">
+                                            <!--Tag textarea must have name="value" and id="value"! -->
                                             <textarea name="value" id="value" value="" placeholder="Input text..."></textarea>
                                         </div>
                                         <div class="content__manage">
@@ -44,7 +45,7 @@
                                                     <div class="select__arrow"><span class="arrow-select"></span></div>
                                                     <div class="select__current select-value">
                                                         <div class="select__icon">
-                                                            <img src="frontend/img/select/uniqueness.png" alt="uniqueness">
+                                                            <img src="src/uniqueness.png" alt="uniqueness">
                                                         </div>
                                                         <p class="select__text">Uniqueness</p>
                                                     </div>
@@ -52,37 +53,39 @@
                                                         <div class="select__arrow"><span class="arrow-select"></span></div>
                                                         <div class="select-option select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/uniqueness.png" alt="uniqueness">
+                                                                <img src="src/uniqueness.png" alt="uniqueness">
                                                             </div>
                                                             <p class="select__text">Uniqueness</p>
                                                         </div>
                                                         <div class="select-disable select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/repetition.png" alt="repetition">
+                                                                <img src="src/repetition.png" alt="repetition">
                                                             </div>
                                                             <p class="select__text">Repetition</p>
                                                         </div>
                                                         <div class="select-disable select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/misprint.png" alt="misprint">
+                                                                <img src="src/misprint.png" alt="misprint">
                                                             </div>
                                                             <p class="select__text">Misprint</p>
                                                         </div>
                                                         <div class="select-disable select-value">
                                                             <div class="select__icon">
-                                                                <img src="frontend/img/select/validation.png" alt="validation">
+                                                                <img src="src/validation.png" alt="validation">
                                                             </div>
                                                             <p class="select__text">Validation</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--Pay attention, this button also must have id="send" and type="button"-->
                                             <button type="button" id="send" class="content__button">Check</button>
                                         </div>
                                     </form>
                                 </div>
+                                <!--PAy attention, this <div> tag, that contains main page photo must has id="img" and class="content__column"-->
                                 <div id="img" class="content__column">
-                                    <img class="content-column__img" src="frontend/img/main.png" alt="">
+                                    <img class="content-column__img" src="src/main.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -95,20 +98,20 @@
                     <div class="test__footer footer">
                         <div class="footer__row">
                             <a href="http://devincubator.by" class="footer__column footer__logo" target="_blank">
-                                <img src="frontend/img/footer/logo.png" alt="logo">
+                                <img src="src/logo.png" alt="logo">
                             </a>
                             <div class="footer__column footer__info">
                                 <p class="footer__text">Dev Incubator, 2021</p>
                             </div>
                             <div class="footer__column footer__socials">
                                 <a href="https://github.com" class="footer__social" target="_blank">
-                                    <img src="frontend/img/footer/github.png" alt="github">
+                                    <img src="src/github.png" alt="github">
                                 </a>
                                 <a href="https://vk.com/feed" class="footer__social" target="_blank">
-                                    <img src="frontend/img/footer/vk.png" alt="vk">
+                                    <img src="src/vk.png" alt="vk">
                                 </a>
                                 <a href="https://www.facebook.com/" class="footer__social" target="_blank">
-                                    <img src="frontend/img/footer/facebook.png" alt="facebook">
+                                    <img src="src/facebook.png" alt="facebook">
                                 </a>
                             </div>
                         </div>
@@ -117,14 +120,14 @@
             </div>
         </div>
     </div>
-
-    <script src="frontend/libs/select/select.js"></script>
+    <!--These 4 JS scripts use for example and you can delete it-->
+    <script src="src/select.js"></script>
     <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
-
-    <script src="frontend/libs/background/particles.js"></script>
-    <script src="frontend/libs/background/app.js"></script>
-
-    <script src="frontend/libs/js/serverRequest.js"></script>
+    <script src="src/particles.js"></script>
+    <script src="src/app.js"></script>
+    <!--End of 4 scripts, that you can delete-->
+    
+    <script src="src/serverRequest.js"></script>
 </body>
 
 
